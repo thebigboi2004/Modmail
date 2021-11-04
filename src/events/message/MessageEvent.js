@@ -99,7 +99,12 @@ module.exports = class MessageEvent extends BaseEvent {
 
 
       } else {
-        return supportChannel.send(`**${message.author.tag}** - ${message.content}`);
+              const System3 = new MessageEmbed()
+        .setColor("BLUE")
+        .setAuthor(`${message.author.tag}'s ticket`, message.author.displayAvatarURL({ dynamic: true}))
+        .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
+        .setDescription(`**${message.author.tag}** - ${message.content}`)
+        return supportChannel.send(`System3`);
       }
       
     }
